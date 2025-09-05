@@ -1,0 +1,189 @@
+main > .announcements-ctn > div, main > .projects-ctn > .projects-grid-ctn > .projects-grid, .sidebar > .side-footer-ctn > p, .sidebar > .side-footer-ctn, .sidebar > .side-main-ctn > p, .sidebar > .side-main-ctn, .sidebar > .side-header-ctn > .side-header, .sidebar > .side-header-ctn, header > .header-main-ctn > div, header > .header-main-ctn, header > .header-search-ctn > div, header > .header-search-ctn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 20% 80%;
+}
+
+header {
+  background-color: black;
+  grid-column: 2/-1;
+  grid-row: 1;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+header > .header-search-ctn {
+  justify-content: space-evenly;
+  color: white;
+  gap: 10px;
+}
+header > .header-search-ctn > div {
+  gap: 10px;
+}
+header > .header-search-ctn > div > input {
+  padding: 8px 20px;
+  width: 600px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+header > .header-search-ctn > div > input > ::-moz-placeholder {
+  color: grey;
+  font-style: italic;
+}
+header > .header-search-ctn > div > input > ::placeholder {
+  color: grey;
+  font-style: italic;
+}
+header > .header-main-ctn {
+  justify-content: space-evenly;
+  color: white;
+  gap: 10px;
+}
+header > .header-main-ctn > div {
+  gap: 10px;
+}
+header > .header-main-ctn > div > button {
+  background-color: black;
+  color: white;
+  font-family: "Ubuntu Mono", monospace;
+  border: 4px solid white;
+  padding: 8px 30px;
+  border-radius: 4px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+header > .header-main-ctn > div > button:hover {
+  filter: opacity(0.9);
+}
+header > .header-main-ctn > div > button:active {
+  filter: invert(1);
+}
+
+.logo {
+  font-family: "Libertinus Keyboard", system-ui;
+  font-size: 2rem;
+  border: 6px solid white;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.name {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1.2rem;
+}
+
+.sidebar {
+  background-color: black;
+  color: white;
+  grid-column: 1;
+  grid-row: 1/-1;
+  display: grid;
+  grid-template-rows: 20% 20% 20%;
+}
+.sidebar > .side-header-ctn {
+  padding: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.sidebar > .side-header-ctn > .side-header {
+  font-family: "Libertinus Keyboard", system-ui;
+  font-size: 1.6rem;
+  gap: 6px;
+}
+.sidebar > .side-main-ctn {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.sidebar > .side-main-ctn > p {
+  gap: 6px;
+}
+.sidebar > .side-footer-ctn {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.sidebar > .side-footer-ctn > p {
+  gap: 6px;
+}
+
+main {
+  background-color: white;
+  grid-column: 2;
+  grid-row: 2/-1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-top: 6px solid grey;
+}
+main > .projects-ctn {
+  grid-column: 1;
+  grid-row: 1/-1;
+  padding: 20px;
+}
+main > .projects-ctn > h1 {
+  text-align: center;
+  font-family: "Ubuntu Mono", monospace;
+}
+main > .projects-ctn > .projects-grid-ctn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 60px;
+}
+main > .projects-ctn > .projects-grid-ctn > .projects-grid {
+  flex-direction: column;
+  gap: 10px;
+  background-color: black;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  border-left: 8px solid grey;
+}
+main > .projects-ctn > .projects-grid-ctn > .projects-grid > .projects-grid-header {
+  font-family: "Ubuntu Mono", monospace;
+  border-bottom: 4px solid white;
+  margin-bottom: 20px;
+}
+main > .projects-ctn > .projects-grid-ctn > .projects-grid > hr {
+  width: 100%;
+}
+main > .announcements-ctn {
+  background-color: black;
+  grid-column: 2;
+  grid-row: 1;
+  color: white;
+  padding: 20px;
+}
+main > .announcements-ctn > h1 {
+  text-align: center;
+  font-family: "Ubuntu Mono", monospace;
+  margin-bottom: 10px;
+}
+main > .announcements-ctn > div {
+  flex-direction: column;
+  padding: 20px;
+}
+main > .announcements-ctn > div > h2 {
+  font-family: "Ubuntu Mono", monospace;
+}
+main > .trending-ctn {
+  background-color: white;
+  grid-column: 2;
+  grid-row: 2;
+  padding: 20px;
+}
+main > .trending-ctn > h1 {
+  font-family: "Ubuntu Mono", monospace;
+  text-align: center;
+}

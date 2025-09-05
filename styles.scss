@@ -1,0 +1,267 @@
+$black: black;
+$white: white;
+$robotoFont: "Roboto", sans-serif;
+$libertinusKeyboardFont: "Libertinus Keyboard", system-ui;
+$ubuntuFont: "Ubuntu Mono", monospace;
+
+%flexer-extender
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body
+{
+    font-family: $robotoFont;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 20% 80%;
+}
+
+header
+{
+    background-color: $black;
+    grid-column: 2 / -1;
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+
+    & > .header-search-ctn
+    {
+        @extend %flexer-extender;
+        justify-content: space-evenly;
+        color: $white;
+        gap: 10px;
+
+        & > div
+        {
+            @extend %flexer-extender;
+            gap: 10px;
+
+            & > input
+            {
+                padding: 8px 20px;
+                width: 600px;
+                border-radius: 20px;
+                border: 2px solid $black;
+
+                & > ::placeholder
+                {
+                    color: grey;
+                    font-style: italic;
+                }
+            }   
+        }
+    }
+
+    & > .header-main-ctn
+    {
+        @extend %flexer-extender;
+        justify-content: space-evenly;
+        color: $white;
+        gap: 10px;
+
+        & > div
+        {
+            @extend %flexer-extender;
+            gap: 10px;
+
+            & > button
+            {
+                background-color: $black;
+                color: $white;
+                font-family: $ubuntuFont;
+                border: 4px solid $white;
+                padding: 8px 30px;
+                border-radius: 4px;
+                transition: 0.15s;
+                cursor: pointer;
+
+                &:hover
+                {
+                    filter: opacity(0.9);
+                }
+
+                &:active
+                {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+
+}
+
+.logo
+{
+    font-family: $libertinusKeyboardFont;
+    font-size: 2rem;
+    border: 6px solid white;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.name
+{
+    font-family: $ubuntuFont;
+    font-size: 1.2rem;
+}
+
+.sidebar
+{
+    background-color: $black;
+    color: $white;
+    grid-column: 1;
+    grid-row: 1 / -1;
+
+    display: grid;
+    grid-template-rows: 20% 20% 20%;
+
+    & > .side-header-ctn
+    {
+        @extend %flexer-extender;
+        padding: 20px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+
+        & > .side-header
+        {
+            @extend %flexer-extender;
+            font-family: $libertinusKeyboardFont;
+            font-size: 1.6rem;
+            gap: 6px;
+        }
+    }
+
+    & > .side-main-ctn
+    {
+        @extend %flexer-extender;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+
+        & > p
+        {
+            @extend %flexer-extender;
+            gap: 6px;
+        }
+    }
+
+    & > .side-footer-ctn
+    {
+        @extend %flexer-extender;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+
+        & > p
+        {
+            @extend %flexer-extender;
+            gap: 6px;
+        }
+    }
+}
+
+main
+{
+    background-color: $white;
+    grid-column: 2;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-top: 6px solid grey;
+    & > .projects-ctn
+    {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        padding: 20px;
+
+        & > h1
+        {
+            text-align: center;
+            font-family: $ubuntuFont;
+        }
+
+        & > .projects-grid-ctn
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 60px;
+
+            & > .projects-grid
+            {
+                @extend %flexer-extender;
+                flex-direction: column;
+                gap: 10px;
+                background-color: $black;
+                color: $white;
+                padding: 40px;
+                border-radius: 10px;
+                border-left: 8px solid grey;
+
+
+                & > .projects-grid-header
+                {
+                    font-family: $ubuntuFont;
+                    border-bottom: 4px solid $white;
+                    margin-bottom: 20px;
+                }
+
+                & > hr
+                {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    & > .announcements-ctn
+    {
+        background-color: $black;
+        grid-column: 2;
+        grid-row: 1;
+        color: $white;
+        padding: 20px;
+
+        & > h1
+        {
+            text-align: center;
+            font-family: $ubuntuFont;
+            margin-bottom: 10px;
+        }
+
+        & > div
+        {
+            @extend %flexer-extender;
+            flex-direction: column;
+            padding: 20px;
+
+            & > h2
+            {
+                font-family: $ubuntuFont;
+            }
+        }
+    }
+
+    & > .trending-ctn
+    {
+        background-color: $white;
+        grid-column: 2;
+        grid-row: 2;
+        padding: 20px;
+
+        & > h1
+        {
+            font-family: $ubuntuFont;
+            text-align: center;
+        }
+    }
+}
+
